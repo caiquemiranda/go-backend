@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app07:
+    build:
+      context: ./app07
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    container_name: go-backend-app07
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge 

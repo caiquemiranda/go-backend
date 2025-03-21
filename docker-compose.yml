@@ -1,6 +1,136 @@
 version: '3.8'
 
 services:
+  app01:
+    build:
+      context: ./app01
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8080"
+    restart: unless-stopped
+    container_name: go-backend-app01
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app02:
+    build:
+      context: ./app02
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8080"
+    restart: unless-stopped
+    container_name: go-backend-app02
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app03:
+    build:
+      context: ./app03
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8080"
+    restart: unless-stopped
+    container_name: go-backend-app03
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app04:
+    build:
+      context: ./app04
+      dockerfile: Dockerfile
+    ports:
+      - "8004:8080"
+    restart: unless-stopped
+    container_name: go-backend-app04
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app05:
+    build:
+      context: ./app05
+      dockerfile: Dockerfile
+    ports:
+      - "8005:8080"
+    restart: unless-stopped
+    container_name: go-backend-app05
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app06:
+    build:
+      context: ./app06
+      dockerfile: Dockerfile
+    ports:
+      - "8006:8080"
+    restart: unless-stopped
+    container_name: go-backend-app06
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app07:
+    build:
+      context: ./app07
+      dockerfile: Dockerfile
+    ports:
+      - "8007:8080"
+    restart: unless-stopped
+    container_name: go-backend-app07
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app08:
+    build:
+      context: ./app08
+      dockerfile: Dockerfile
+    ports:
+      - "8008:8080"
+    restart: unless-stopped
+    container_name: go-backend-app08
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app09:
+    build:
+      context: ./app09
+      dockerfile: Dockerfile
+    ports:
+      - "8009:8080"
+    restart: unless-stopped
+    container_name: go-backend-app09
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
+  app10:
+    build:
+      context: ./app10
+      dockerfile: Dockerfile
+    ports:
+      - "8010:8080"
+    restart: unless-stopped
+    container_name: go-backend-app10
+    environment:
+      - TZ=America/Sao_Paulo
+    networks:
+      - app-network
+
   app11:
     build:
       context: ./app11
