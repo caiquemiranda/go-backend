@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app14:
+    build:
+      context: ./app14
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    container_name: go-backend-app14
+    environment:
+      - TZ=America/Sao_Paulo
+      - SERVER_PORT=8080
+      - API_VERSION=v1
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge 

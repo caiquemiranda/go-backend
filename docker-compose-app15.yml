@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app15:
+    build:
+      context: ./app15
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    container_name: go-backend-app15
+    environment:
+      - TZ=America/Sao_Paulo
+      - PORT=8080
+      - JWT_SECRET=minha-chave-secreta-super-segura
+      - JWT_EXPIRATION=24h
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge 
